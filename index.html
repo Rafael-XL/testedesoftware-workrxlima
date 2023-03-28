@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="js/menu.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/passos.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<div id="idcabecalho">
+
+<h1>Teste de Software</h1>
+
+
+<ul>
+    <li><button type="button" onclick="tela1()">Home</button></li>
+    <li><button type="button" onclick="tela2()">Tester</button></li>
+    <li><button type="button" onclick="tela3()">NoLimit</button></li>
+
+
+</ul>
+
+</div>
+
+
+
+
+<div id="idaulaexpositiva">
+    <div id="aula-cabecalho"><h3>Leia-me <hr size="2" width="100%"></h3></div>
+    <p>
+        Bem-vindo a dinâmica com o <b>Tester</b> e <b>noLimit</b>. A dinâmica apresenta jogos simples criados 
+        para o apoio ao ensino e aprendizado de teste de software.
+    </p>
+    <p>
+    <div id="aula-cabecalho"><h5>Passo a Passo</h5>
+        Para participar da dinâmica com os jogos você deve primeiramente seguir esses passos:
+    <div id="divlist">
+        <ul>
+
+            <li>Primeiramente responder um questionário inicial seguido por esse <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-c6dgwzw-XmSYKOUy0Bu-Wod30wAWzrGjS4FvKQAlc9hIyw/viewform?usp=sf_link" target="_blank">link</a>.</li>
+            <li>Ler informações dessa página para servir de base para aplicação dos jogos.</li>
+            <li>Depois de tudo isso, você já pode jogar! Experimente quanto quiser!</li>
+            <li>Depois de jogar você pode responder um questionario final para um feedback nesse <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9qv-9zgYk6wHmS8LziKvAi0aAYytQruyocERMRFwQCCmhyg/viewform?usp=sf_link" target="_blank">link</a>.</li>
+
+        </ul>
+    </div>
+    </p>
+</div>
+<div id="idintroducao">
+<h3>O que é teste de Software? <hr size="2" width="100%"></h3>
+<p>
+    Teste de Software é um processo do desenvolvimento de software, que tem como objetivo encontrar falhas e bugs. 
+    A idéia é verificar se o software entrega tudo aquilo que ele propõe. Testar um software implica em qualidade de software, pois é 
+    através do teste que validamos as funcionalidades que ele propõe.
+</p>
+
+<h3>Como testar um software?<hr size="2" width="100%"></h3>
+<p>
+    Existem várias técnicas para testar um software e através delas o software é adequadamente testado. 
+    O software tem que ser submetido a um teste em três momentos: durante o desenvolvimento, após o desenvolvimento e na homologação, ou seja, no momento em que o software 
+    será ativado para ser utilizado. 
+</p>
+
+<h3>Testar o software e não encontrar erros significa que o sofware não possui falhas?<hr size="2" width="100%"></h3>
+<p>Através da atividade de teste pode-se detectar apresença de erros em um programa, embora não se
+possa concluir a ausência deles.
+</p>
+
+<h3>Erro, defeito e falha<hr size="2" width="100%"></h3>
+<p>
+    Uma pessoa pode cometer um erro (engano), que pode levar à introdução de um defeito (falha ou
+bug) no código do software ou em algum outro produto de trabalho relacionado. Um erro que leva
+à introdução de um defeito em um produto de trabalho pode acionar outro erro que leva à
+introdução de um defeito em um outro produto de trabalho relacionado. Por exemplo, um erro de
+elicitação de requisitos pode levar a um defeito de requisitos, o que resulta em um erro de
+desenvolvimento que leva a um defeito no código.
+
+<h4>Erro</h4>
+<p>
+    Erro humano produzindo resultado incorreto. O erro evidencia o defeito, ou seja, quando há diferença entre o valor obtido e o valor esperado constitui um erro.
+</p>
+
+<h4>Defeito</h4>
+<p>
+    É uma inconsistência no software, algo que foi implementado de maneira incorreta. Ele ocorre em uma linha de código, como uma instrução errada 
+    ou um comando incorreto. O defeito é a causa de um erro, porém se uma linha de código que contém o defeito nunca executar, o defeito não vai provocar um erro.
+</p>
+
+<h4>Falha</h4>
+<p>
+    É um comportamento inesperado do software. Uma falha pode ter sido causada por diversos erros, mas alguns erros podem nunca causar uma falha. 
+    Exemplo prático: Houve um retorno de um valor não esperado, como null, isso é um erro, e por causa desse null ocasionou uma falha no sistema.
+</p>
+
+
+
+</p>
+
+<h3>Casos de Teste e Cenários de Teste<hr size="2" width="100%"></h3>
+<p><b>Caso de teste</b> é um conjunto de ações executadas para verificar um determinado recurso ou funcionalidade do aplicativo.<br>
+<b>Cenário de teste</b> é qualquer funcionalidade do aplicativo que pode ser testada.
+</p>
+Exemplos de Casos de Teste:<br><br>
+
+<table border="1">
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Ação</b></td>
+        <td><b>Resultados Esperados</b></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Preencher campo "CPF" com um valor inválido</td>
+        <td>Exibir uma mensagem de erro "CPF" inválido</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Preencher o campo "Idade" abaixo do valor mínimo</td>
+        <td>Exibir uma mensagem de erro "Idade" não permitida</td>
+    </tr>
+</table><br>
+
+
+<h3>Niveis de Teste<hr size="2" width="100%"></h3>
+<p>
+
+    De acordo com ISTQB® (International Software Testing Qualifications Board), os níveis de teste são grupos de atividades 
+    organizadas e geridas em conjunto. Cada nível é uma instância do processo de teste e estão divididos da seguinte forma:
+</p>
+
+<ol type="a">
+    <li><b>Teste de Componente ou Unitário:</b> Testa unidades individuais de programa de forma independente. Um exemplo uma função de soma entre dois números, o resultado da soma de 1 e 2 deve sempre ser 3.O teste de componente geralmente é realizado isoladamente do resto do sistema</li>
+    <li><b>Teste de Integração:</b> É o teste entre diferentes módulos em um sistema. Um exemplo para esse teste de requisições HTTP, o mais comum para servidores.</li>
+    <li><b>Teste de Sistema:</b> O sistema é testado como um todo. Testa uma release de sistema que será entregue ao cliente.</li>
+    <li><b>Teste de Aceite:</b> é a ação de teste final antes da implementação do software. A meta do teste de aceitação é verificar se o software está pronto e pode ser utilizado pelos usuários, 
+        para desempenhar as funções e tarefas para as quais o software foi construído. </li>
+    </ol>
+
+    <div id="idfigure">
+    <figure>
+        <img id="img1" src="img/piramide.jpg" class="responsive" alt="Minha Figura">
+        <figcaption>Figura: Pirâmide de Testes</figcaption>
+    </figure>
+   </div>
+
+   <h3>Tipos de Teste<hr size="2" width="100%"></h3>
+   <ol type="a">
+    <li><b>Teste funcional:</b> Essa técnica testa os requisitos funcionais, as funções e os casos de uso. Exemplo: 
+           Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete.</li>
+    <li><b>Teste não funcional:</b> Avaliam as características de sistemas e de softwares, como
+        usabilidade, eficiência de performance ou segurança</li>
+    <li><b>Teste relacionado a mundaça:</b>  testar para confirmar se as alterações corrigiram o defeito ou implementaram a funcionalidade corretamente e não causaram consequências adversas imprevistas.</li>
+    <li><b>Teste de caixa-branca:</b> é derivado de testes com base na estrutura interna ou na implementação do sistema. A estrutura interna pode incluir código, arquitetura, fluxos de trabalho e fluxos de dadosdentro do sistema.</li>
+    <li><b>Teste exploratório:</b> É um técnica que tem o foco em explorar (vasculhar) um software para entender o que ele faz, o que não faz, o que funciona e o que não funciona.</li>
+    <li><b>Teste de segurança:</b> Permite avaliar as vulnerabilidades em aplicações serviços frente a diferentes tipos de ataques de segurança.</li>
+    <li><b>Teste de Performance:</b> Testar o software a fim de encontrar o seu limite de processamento de dados no seu melhor desempenho.</li>
+    </ol>
+
+    <div id="idfigure2">
+        <figure>
+            <img id="img2" src="img/imagem-generica.jpg" class="responsive" alt="Minha Figura">
+            <figcaption>Figura: Imagem</figcaption>
+        </figure>
+       </div>
+
+       <h3>Outros conceitos de Teste<hr size="2" width="100%"></h3>
+   <ol type="a">
+    <li><b>Teste stress:</b> Testes de estresse são usados para garantir a estabilidade e a confiabilidade do sistema. Os testes simulam uma alta taxa de dados e de tráfego e registram como o sistema responde nestas condições.</li>
+    <li><b>Teste de Carga:</b> É a prática de simular o uso do mundo real, ou carregar, em qualquer software, site, aplicativo web, API ou sistema para analisar e identificar fatores como capacidade de resposta, degradação e escalabilidade.</li>
+    <li><b>Teste de Conformidade:</b> É uma técnica de teste não funcional para determinar se um sistema atende aos padrões prescritos.</li>
+    <li><b>Teste de Usabilidade:</b>  Os testes são realizados com usuários representativos do público-alvo. Cada participante tenta realizar tarefas típicas enquanto o analista observa, ouve e anota.</li>
+   </ol>
+
+
+
+    <h3>Teste de caixa-preta na prática<hr size="2" width="100%"></h3>
+   <p>
+    Nos testes de caixa-preta, o foco é apenas as entradas e saídas do sistema, sem se preocupar com a estrutura interna do programa.
+   </p>
+
+   <h3>Técnicas de teste caixa-preta <hr size="2" width="100%"></h3>
+   <h4>Particionamento de equivalência</h4>
+   <p>
+    O particionamento de equivalência divide os dados em partições (também conhecidas como classes
+    de equivalência), de tal forma que todos os membros de uma determinada partição deve ser
+    processado da mesma maneira (ver Kaner (2013) e Jorgensen (2014)). Existem partições de
+    equivalência para valores válidos e inválidos.
+   </p>
+
+   <h4>Análise de valor limite</h4>
+   <p>
+    A análise de valor limite é uma extensão do particionamento de equivalência, mas só pode ser usada
+quando a partição é ordenada, consistindo em dados numéricos ou sequenciais. Os valores mínimo
+e máximo (ou primeiro e último valores) de uma partição são seus valores limites (Beizer, 1990).
+   </p>
+
+   <h4>Teste de tabela de decisão</h4>
+   <p>
+    Técnicas de teste combinatórias são úteis para testar a implementação de requisitos do sistema que
+especificam como diferentes condições de combinações levam à resultados diferentes. Uma
+abordagem para esse teste é o teste de tabela de decisão.
+   </p>
+
+
+   <h3>Profissionais de Teste<hr size="2" width="100%"></h3>
+   <ol type="a">
+    <li><b>Testers:</b> Essa técnica testa os requisitos funcionais, as funções e os casos de uso. Exemplo: 
+           Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete.</li>
+    <li><b>Analista de Testes:</b> É uma técnica do teste de software que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos em componentes já analisados.</li>
+    <li><b>Gerente de Testes:</b> Uma das principais atividades de um Gerente de Teste é garantir e utilizar recursos que tem disponíveis (pessoas, software, hardware, infraestrutura etc.) para a realização de processos que agreguem valor.</li>
+    </ol>
+
+
+
+
+
+   
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="idtestador">
+
+    <div id="logo-testador">
+        <img id="img4" src="img/logo-tester.png" class="responsive" alt="Minha Figura">
+    </div>
+
+    <div id="idcabecalho-testador">
+        <hr size="2" width="100%">
+        <p><b>Instruções: O jogador tem um tempo determinado para encontrar todos os casos de teste do sistema. 
+        Cada teste que o jogador fizer ele ganha 10 pontos. Existem alguns determinados testes espalhados no sistema que valem 15 pontos. Se o jogador fizer o mesmo teste duas ou mais vezes ele não ganha pontos. O jogador vence o jogo quando ele fizer todos os testes antes que o tempo acabe.</b></p>
+        <hr size="2" width="100%"><br>
+    </div>
+        <div class="container3" id="idlayout-tester">
+            <div>
+            <select name="select" id="id_select_dificultade">
+                <option value="1" selected>Nivel 1 (Tester Junior)</option>
+                <option value="2">Nivel 2 (Brabo)</option>
+                <option value="3">Nivel 3 (Profissional)</option>
+            </select>
+            </div>
+            <div class="item-botao-start">
+            <button id="idbtn_start" type="button" onclick="inicio_jogo()">Iniciar Jogo</button>
+            </div>
+            <div class="marcacoes">
+                Tempo: 
+                <span id="idtempo"></span>
+            </div>
+            <div class="marcacoes">
+                Score: 
+                <span id="idspanpontuacao">0</span>
+            </div>
+        </div>
+
+        
+        <p>
+            Você é um analista de testes e foi contratado por uma empresa para avaliar as funcionalidades do sistema de uma Biblioteca.
+            Você tem que realizar todos os casos de teste de acordo com os requisitos reportados. Você ganhou um cadastro de usuário tester@gmail.com e  com senha: teste123. Os desenvolvedores pediram com urgência
+            sua analise por isso você tem que fazer no menor tempo possível!
+        </p>
+        <div id="divlist">
+        <p>
+            <ul>
+                <li>O campo LOGIN são preenchidos com os emails.</li>
+                <li>EMAILS necessitam de ter um @.</li>
+                <li>SENHAS tem obrigatoriamente ter no mínimo 8 caracteres.</li>
+                <li>SENHAS só podem ter no máximo 15 caracteres.</li>
+                <li>NOMES válidos somente por letras.</li>
+                <li>CPF possui obrigatoriamente 11 dígitos.</li>
+                <li>RG possui obrigatoriamente 7 dígitos.</li>
+                <li>TELEFONE possui obrigatoriamente 10 dígitos.</li>
+                <li>A biblioteca cadastra livros do ANO 1516 para cima.</li>
+                <li>VOLUMES dos livros são aceitos apartir do primeiro.</li>
+                <li>Somente campos opicionais podem ser deixados em BRANCO.</li>
+                <li>Os usuários válidos tem acesso ao sistema.</li>
+            </ul>
+        </p>
+        </div>
+
+        
+        
+
+        <table id="tabelas" border="1">
+            <tr>
+                <td><b>ID</b></td>
+                <td><b>Ação</b></td>
+                <td><b>Resultados Esperados</b></td>
+            </tr>
+
+        </table><br><br>
+
+
+
+    <div id="tela-login">
+        <div id="titleapp">
+            <label>LOGIN</label>
+        </div>
+
+        <div class="container">
+            <div>
+                <label>Login:</label>
+            </div>
+            <div>
+                <input id="userLogin" type="text" aria-label="Usuário" placeholder="Usuário">
+            </div>
+            <div>
+                <label>Senha:</label>
+            </div>
+            <div>
+                <input id="userSenha" type="password" aria-label="Senha" placeholder="Senha">
+            </div>
+            <div>
+                <a href="javascript:void(0)" onclick="verifcarEsueceu()">Esqueceu a senha?</a>
+            </div>
+            <div id="line-button">
+                <button disabled id="btn_entrar" href="#" type="button" onclick="verficarCamposLogin()">Entrar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="tela-usuario">
+        <div id="titleapp">
+            <label>USUÁRIO</label>
+        </div>
+        <div class="container2">
+            <div>
+                <label>Nome:</label>
+                <input id="userNome" type="text" aria-label="Usuário" placeholder="Nome">
+            </div>
+            <div>
+                <label>CPF:</label>
+                <input id="userCPF" type="text" placeholder="000.000.000-00">
+            </div>
+            <div>
+                <label>RG:</label>
+                <input id="userRG" type="text" placeholder="99.999.999-0">
+            </div>
+            <div id="item-endereco">
+                <label>Endereço:</label>
+                <input id="userEnd" type="text" aria-label="Usuário" placeholder="Endereço">
+            </div>
+            <div>
+                <label>Bairro:</label>
+                <input id="userBairro" type="text" placeholder="Bairro">
+            </div>
+            <div>
+                <label>Cidade:</label>
+                <input id="userCidade" type="text" placeholder="Cidade">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input id="userEmail" type="text" aria-label="Usuário" placeholder="Email">
+            </div>
+            <div>
+                <label>Telefone(opicional):</label>
+                <input id="userTelefone" type="text" placeholder="(99)99999999">
+            </div>
+            <div>
+                <label>Celular:</label>
+                <input id="userCelular" type="text" placeholder="(99)99999999">
+            </div>
+            <div id="item-senha">
+                <label>Senha:</label>
+                <input id="userPass" type="password" aria-label="Usuário" placeholder="Senha">
+            </div>
+            <div id="item-conf2">
+                <label>Confirmação de Senha:</label>
+                <input id="userConfSenha" type="password" aria-label="Usuário" placeholder="Confirmação de Senha">
+            </div>
+            <div></div>
+            <div></div>
+            <div id="line-button" onclick="verficarCamposUsuario()">
+                <button disabled type="button" id="btn_cad_usuario">Cadastrar</button>
+            </div>
+     </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="tela-livro">
+        
+        <div id="titleapp">
+            <label>LIVRO</label>
+        </div>
+
+        <div class="container2">
+        <div>
+            <label>Título:</label>
+            <input id="livro-titulo" type="text" aria-label="Usuário" placeholder="Título">
+        </div>
+        <div>
+            <label>Autor:</label>
+            <input id="livro-autor" type="text" aria-label="Usuário" placeholder="Autor">
+        </div>
+        <div>
+            <label>Ano:</label>
+            <input id="livro-ano" type="text" placeholder="Ano">
+        </div>
+        <div>
+            <label>Volume:</label>
+            <input id="livro-volume" type="text" placeholder="Volume">
+        </div>
+        <div>
+            <label>Editora:</label>
+            <input id="livro-editora" type="text" aria-label="Usuário" placeholder="Editora">
+        </div>
+        <div>
+            <label>Estante(opicional):</label>
+            <input id="livro-estante" type="text" aria-label="Usuário" placeholder="Nº Estante">
+        </div>
+        <div id="livro-obs">
+            <label>Observações(opicional):</label><br>
+            <textarea id="w3review" placeholder="Digite Observações aqui ..."></textarea>
+        </div>
+        <div></div>
+        <div></div>
+        <div id="line-button">
+            <button disabled type="button" id="btn_cad_livro" onclick="verificarLivro()">Cadastrar</button>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+
+    
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="idnolimit">
+    <div id="logo-no-limit">
+        <img id="img-logo-limit" src="img/logo-no-limit.png" class="responsive" alt="Minha Figura">
+    </div>
+
+    <div id="idcabecalho-nolimit">
+        <hr size="2" width="100%">
+        <p><b>Instruções: O jogador tem um determinado tempo para escrever todas as palavras-chave correspondentes as dicas abaixo.
+            Ganha o jogo se o jogador digitar todas as palavras antes que tempo acabe!
+        </b></p>
+        <hr size="2" width="100%"><br>
+
+        <div class="container3" id="idlayout-tester">
+            <div>
+            <select name="select" id="id_select_dificultade2">
+                <option value="1" selected>Nivel 1 (Tester Junior)</option>
+                <option value="2">Nivel 2 (Brabo)</option>
+                <option value="3">Nivel 3 (Profissional)</option>
+            </select>
+            </div>
+            <div class="item-botao-start">
+                <button id="idbtn_start2" type="button" onclick="inicio_jogo2()">Iniciar Jogo</button>
+            </div>
+            <div class="marcacoes">
+                Tempo: 
+                <span id="idtempo2"></span>
+            </div>
+            <div class="marcacoes">
+                Score: 
+                <span id="idspanpontuacao2">0</span>
+            </div>
+        </div>
+    </div>
+
+        <div id="divlistdicas">
+            <div id="div-listinha">
+                <ol>
+                    <li style="list-style-position: inside" >Um comportamento inesperado do software. <span id="span-list-1"></span></li>
+                    <li style="list-style-position: inside" >É uma inconsistência no software, algo que foi implementado de maneira incorreta.<span id="span-list-2"></li>
+                    <li style="list-style-position: inside">Evidencia o defeito, ou seja, quando há diferença entre o valor obtido e o valor esperado. <span id="span-list-3"></li>
+                    <li style="list-style-position: inside">Técnica de teste baseada numa análise da especificação de um componente ou sistema. <span id="span-list-4"></span></li>
+                    <li style="list-style-position: inside">Testes baseados numa análise da estrutura interna do componente ou sistema. <span id="span-list-5"></span></li>
+                    <li style="list-style-position: inside">Técnica que prevê a ocorrência de erros, defeitos e falhas, combase no conhecimento do testador. <span id="span-list-6"></span></li>
+                    <li style="list-style-position: inside">Testes informais (não pré-definidos) são modelados, executados, registrados e avaliados dinamicamente durante a execução do teste. <span id="span-list-7"></span></li>
+                    <li style="list-style-position: inside">Técnica de teste onde os testadores modelam, implementam e executam testes para cobrir as condições de teste encontradas em uma lista. <span id="span-list-8"></span></li>
+                    <li style="list-style-position: inside">Se concentra em componentes que são testáveis separadamente. <span id="span-list-9"></span></li>
+                    <li style="list-style-position: inside">Se concentra no comportamento e nas capacidades de todo um sistema ou produto, geralmente considerando as execuções das tarefas de ponta a ponta do sistema e oscomportamentos não-funcionais exibidos ao executar tais tarefas. <span id="span-list-10"></span></li>
+                    <li style="list-style-position: inside">Pode produzir informações para avaliar a situação do sistema para implantação e uso pelo cliente (usuário final). <span id="span-list-11"></span></li>
+                    <li style="list-style-position: inside">Esses testes devem ser realizados em todos os níveis de teste (p.e, testes para componentespodem ser baseados em uma especificação de componente), embora o foco possa ser diferente em cada nível. <span id="span-list-12"></span></li>
+                </ol>
+            </div>
+        </div>
+
+        
+        <div class="container4" id="divpartepesquisa">
+            <div class="box" id="item-pesquisa1"><input id="userPesquisa" type="text" aria-label="Usuário" placeholder="digite aqui a palavra-chave ..."></div>
+            <div class="box" id="item-pesquisa2"><button disabled type="button" id="btn_pesquisar" onclick="getPalavras()">Pesquisar</button></div>
+            <div class="box" id="item-pesquisa3"><span id="span-acerto"></span></div>
+            <div class="box" id="item-pesquisa4"><span id="span-erro1">Erros:</span>
+            <span id="span-erro2">0</span></div>
+        </div>
+        <div id="div-area-palavras-chave">
+            <span id="span-area-palavras"></span>
+        </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+</div>
+
+
+
+
+
+    
+</body>
+</html>
