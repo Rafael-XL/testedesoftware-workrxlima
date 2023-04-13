@@ -82,19 +82,24 @@ desenvolvimento que leva a um defeito no código.
 
 <h4>Erro</h4>
 <p>
-    Erro humano produzindo resultado incorreto. O erro evidencia o defeito, ou seja, quando há diferença entre o valor obtido e o valor esperado constitui um erro.
+    Erro humano pode produzir um resultado incorreto. O erro indica o defeito, ou seja, quando há diferença entre o valor obtido e o valor esperado constitui um erro.
+    Erros podem ocorrer por vários motivos, como: Falha humana;  Pressão do tempo; Participantes do projeto inexperientes ou insuficientemente qualificados;
+    
 </p>
 
 <h4>Defeito</h4>
 <p>
-    É uma inconsistência no software, algo que foi implementado de maneira incorreta. Ele ocorre em uma linha de código, como uma instrução errada 
+    É uma inconsistência no software, algo que foi naõ foi implementado de maneira correta. Ele ocorre em uma linha de código, como uma instrução errada 
     ou um comando incorreto. O defeito é a causa de um erro, porém se uma linha de código que contém o defeito nunca executar, o defeito não vai provocar um erro.
+    A execução de um código defeituoso, pode causar uma falha, mas não necessariamente em todas as circunstâncias.
 </p>
 
 <h4>Falha</h4>
 <p>
-    É um comportamento inesperado do software. Uma falha pode ter sido causada por diversos erros, mas alguns erros podem nunca causar uma falha. 
+    É um evento inesperado do software. Uma falha pode ter sido causada por diversos erros, mas alguns erros podem nunca causar uma falha. 
     Exemplo prático: Houve um retorno de um valor não esperado, como null, isso é um erro, e por causa desse null ocasionou uma falha no sistema.
+    Falhas também podem ser causadas por questões ambientais.Por exemplo, campos eletromagnéticos, radiação, e poluição podem causar
+    defeitos no firmware ou influenciar a execução do software alterando as condições do hardware.
 </p>
 
 
@@ -102,8 +107,11 @@ desenvolvimento que leva a um defeito no código.
 </p>
 
 <h3>Casos de Teste e Cenários de Teste<hr size="2" width="100%"></h3>
-<p><b>Caso de teste</b> é um conjunto de ações executadas para verificar um determinado recurso ou funcionalidade do aplicativo.<br>
-<b>Cenário de teste</b> é qualquer funcionalidade do aplicativo que pode ser testada.
+<p><b>Caso de teste</b> é um conjunto de ações executadas para verificar um determinado recurso ou funcionalidade do aplicativo.
+    As circunstâncias do teste podem ser um documento detalhado, incluindo todas as entradas possíveis como, por exemplo, negativas e positivas, 
+    além das atividades de navegação. Eles são implementados através do procedimento de avaliação para testar ou talvez o aplicativo tenha feito um aplicativo de trabalho para isso foi criado ou talvez não.<br>
+<b>Cenário de teste</b> é um tipo menos detalhado de documentação é o cenário de teste. Um cenário de teste é uma descrição de um objetivo que o usuário pode encontrar ao utilizar o programa. Um exemplo seria “Testar se um usuário consegue deslogar do 
+programa ao fechá-lo”. Tipicamente, um cenário de teste vai precisar de diferentes tipos de testes para garantir que o objetivo tenha sido bem testado. Utilizando o exemplo, o testador pode escolher fechar o programa pelo menu, fechá-lo pelo gerenciador de tarefas, desligar o computador ou como o programa reage quando fica sem memória e dá erro. Já que os cenários de testes oferecem pouca informação sobre como completar o teste, os testadores tem uma grande flexibilização para buscar uma solução.
 </p>
 Exemplos de Casos de Teste:<br><br>
 
@@ -134,11 +142,30 @@ Exemplos de Casos de Teste:<br><br>
 </p>
 
 <ol type="a">
-    <li><b>Teste de Componente ou Unitário:</b> Testa unidades individuais de programa de forma independente. Um exemplo uma função de soma entre dois números, o resultado da soma de 1 e 2 deve sempre ser 3.O teste de componente geralmente é realizado isoladamente do resto do sistema</li>
-    <li><b>Teste de Integração:</b> É o teste entre diferentes módulos em um sistema. Um exemplo para esse teste de requisições HTTP, o mais comum para servidores.</li>
-    <li><b>Teste de Sistema:</b> O sistema é testado como um todo. Testa uma release de sistema que será entregue ao cliente.</li>
-    <li><b>Teste de Aceite:</b> é a ação de teste final antes da implementação do software. A meta do teste de aceitação é verificar se o software está pronto e pode ser utilizado pelos usuários, 
-        para desempenhar as funções e tarefas para as quais o software foi construído. </li>
+    <li><b>Teste de Componente ou Unitário:</b> Testa unidades individuais de programa de forma independente. O teste de componente geralmente é realizado isoladamente do resto do sistema, dependendo do
+        modelo de ciclo de vida de desenvolvimento de software e de sistema, que pode exigir objetos
+        simulados, virtualização de serviços, estrutura, simuladores e controladores. Um exemplo uma função de soma entre dois números, o resultado da soma de 1 e 2 deve sempre ser 3.</li>
+    <li><b>Teste de Integração:</b> É o teste entre diferentes módulos em um sistema. 
+        A realização de testes de integração não é simplismente testar a lógica dos componentes, 
+        mas testar como os diferentes componentes interagem entre si (testes de integração de componentes).
+        Isso garante que as alterações não interromperam as interfaces, os componentes ou
+        sistemas existentes.
+        Um exemplo para esse teste de requisições HTTP, o mais comum para servidores.</li>
+    <li><b>Teste de Sistema:</b> O teste de sistema se concentra no comportamento e nas capacidades de todo um sistema ou
+        produto, geralmente considerando as execuções das tarefas de ponta a ponta do sistema e os
+        comportamentos não-funcionais exibidos ao executar tais tarefas.
+        O teste do sistema geralmente produz
+        informações que são usadas pelos stakeholders para tomar decisões de liberação. O teste do sistema
+        também pode satisfazer requisitos ou padrões legais e regulatórios.
+    </li>
+    <li><b>Teste de Aceite:</b> O teste de aceite, como o teste do sistema, geralmente se concentra no comportamento e na
+        capacidade de todo um sistema ou produto.
+        O teste de aceite pode produzir informações para avaliar a situação do sistema para implantação e
+        uso pelo cliente (usuário final). Os defeitos podem ser encontrados durante o teste de aceite, mas
+        encontrar defeitos muitas vezes não é um objetivo, e encontrar um número significativo de defeitos
+        durante o teste de aceite pode, em alguns casos, ser considerado um grande risco de projeto. O teste
+        de aceite também pode satisfazer requisitos ou padrões legais ou regulatórios.
+    </li>
     </ol>
 
     <div id="idfigure">
@@ -151,12 +178,27 @@ Exemplos de Casos de Teste:<br><br>
    <h3>Tipos de Teste<hr size="2" width="100%"></h3>
    <ol type="a">
     <li><b>Teste funcional:</b> Essa técnica testa os requisitos funcionais, as funções e os casos de uso. Exemplo: 
-           Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete.</li>
+           Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete. O teste funcional de um sistema envolve testes que avaliam as funções que o sistema deve executar.
+           Os requisitos funcionais podem ser descritos em produtos de trabalho, como especificações de
+           requisitos, de negócios, épicos, histórias de usuários, casos de uso ou especificações funcionais,
+           podendo ainda não estarem documentados.</li>
     <li><b>Teste não funcional:</b> Avaliam as características de sistemas e de softwares, como
-        usabilidade, eficiência de performance ou segurança</li>
-    <li><b>Teste relacionado a mundaça:</b>  testar para confirmar se as alterações corrigiram o defeito ou implementaram a funcionalidade corretamente e não causaram consequências adversas imprevistas.</li>
-    <li><b>Teste de caixa-branca:</b> é derivado de testes com base na estrutura interna ou na implementação do sistema. A estrutura interna pode incluir código, arquitetura, fluxos de trabalho e fluxos de dadosdentro do sistema.</li>
-    <li><b>Teste exploratório:</b> É um técnica que tem o foco em explorar (vasculhar) um software para entender o que ele faz, o que não faz, o que funciona e o que não funciona.</li>
+        usabilidade, eficiência de performance ou segurança.
+        Ao contrário das percepções errôneas comuns, o teste não-funcional pode e geralmente deve ser
+        realizado em todos os níveis de teste, e feito o mais cedo possível. A descoberta tardia de defeitos
+        não-funcionais pode ser extremamente perigosa para o sucesso de um projeto.
+    </li>
+    <li><b>Teste relacionado a mundaça:</b>  Quando são feitas alterações em um sistema, seja para corrigir um defeito ou por causa de uma
+        funcionalidade nova ou variável, deve-se testar para confirmar se as alterações corrigiram o defeito
+        ou implementaram a funcionalidade corretamente e não causaram consequências adversas
+        imprevistas.</li>
+    <li><b>Teste de caixa-branca:</b> É derivado de testes com base na estrutura interna ou na implementação do sistema. A estrutura interna pode incluir código, arquitetura, fluxos de trabalho e fluxos de dadosdentro do sistema.
+        A eficácia dos testes caixa-branca pode ser medida através da cobertura estrutural. A cobertura
+        estrutural é a extensão em que algum tipo de elemento estrutural foi testado e é expresso como
+        uma porcentagem do tipo de elemento a ser coberto.
+        </li>
+    <li><b>Teste exploratório:</b> É um técnica que tem o foco em explorar (vasculhar) um software para entender o que ele faz, o que não faz, o que funciona e o que não funciona.
+    O testador utiliza sua própria experiência para projetar os testes.</li>
     <li><b>Teste de segurança:</b> Permite avaliar as vulnerabilidades em aplicações serviços frente a diferentes tipos de ataques de segurança.</li>
     <li><b>Teste de Performance:</b> Testar o software a fim de encontrar o seu limite de processamento de dados no seu melhor desempenho.</li>
     </ol>
@@ -180,7 +222,8 @@ Exemplos de Casos de Teste:<br><br>
 
     <h3>Teste de caixa-preta na prática<hr size="2" width="100%"></h3>
    <p>
-    Nos testes de caixa-preta, o foco é apenas as entradas e saídas do sistema, sem se preocupar com a estrutura interna do programa.
+    O nome caixa preta vem do sentido de que nesse tipo de teste, não é necessário saber a estrutura interna de como o código foi implementado ou a tecnologia que foi utilizada. Nesse tipo de análise, essas questões são transparentes para os analistas de teste. 
+    É claro que para se ter um projeto de teste bem sucedido, é necessário usar a técnica de caixa preta e mais a de caixa branca, isto é, analisar, também, a estrutura interna da aplicação.
    </p>
 
    <h3>Técnicas de teste caixa-preta <hr size="2" width="100%"></h3>
@@ -207,13 +250,6 @@ abordagem para esse teste é o teste de tabela de decisão.
    </p>
 
 
-   <h3>Profissionais de Teste<hr size="2" width="100%"></h3>
-   <ol type="a">
-    <li><b>Testers:</b> Essa técnica testa os requisitos funcionais, as funções e os casos de uso. Exemplo: 
-           Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete.</li>
-    <li><b>Analista de Testes:</b> É uma técnica do teste de software que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos em componentes já analisados.</li>
-    <li><b>Gerente de Testes:</b> Uma das principais atividades de um Gerente de Teste é garantir e utilizar recursos que tem disponíveis (pessoas, software, hardware, infraestrutura etc.) para a realização de processos que agreguem valor.</li>
-    </ol>
 
 
 
