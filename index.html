@@ -179,7 +179,7 @@ Exemplos de Casos de Teste:<br><br>
    <ol type="a">
     <li><b>Teste funcional:</b> Essa técnica testa os requisitos funcionais, as funções e os casos de uso. Exemplo: 
            Realizar o teste de aceitação do usuário, para avaliar se o software faz o que promete. O teste funcional de um sistema envolve testes que avaliam as funções que o sistema deve executar.
-           Os requisitos funcionais podem ser descritos em produtos de trabalho, como especificações de
+           Os requisitos funcionais são descritos em produtos de trabalho, como especificações de
            requisitos, de negócios, épicos, histórias de usuários, casos de uso ou especificações funcionais,
            podendo ainda não estarem documentados.</li>
     <li><b>Teste não funcional:</b> Avaliam as características de sistemas e de softwares, como
@@ -188,7 +188,7 @@ Exemplos de Casos de Teste:<br><br>
         realizado em todos os níveis de teste, e feito o mais cedo possível. A descoberta tardia de defeitos
         não-funcionais pode ser extremamente perigosa para o sucesso de um projeto.
     </li>
-    <li><b>Teste relacionado a mundaça:</b>  Quando são feitas alterações em um sistema, seja para corrigir um defeito ou por causa de uma
+    <li><b>Teste relacionado a mundaça:</b>  Quando são realizadas alterações em um sistema, seja para corrigir um defeito ou por causa de uma
         funcionalidade nova ou variável, deve-se testar para confirmar se as alterações corrigiram o defeito
         ou implementaram a funcionalidade corretamente e não causaram consequências adversas
         imprevistas.</li>
@@ -197,6 +197,8 @@ Exemplos de Casos de Teste:<br><br>
         estrutural é a extensão em que algum tipo de elemento estrutural foi testado e é expresso como
         uma porcentagem do tipo de elemento a ser coberto.
         </li>
+    <li><b>Teste de caixa cinza:</b> É uma técnica de teste de software que é uma combinação da técnica de teste de caixa preta e de teste de caixa branca. O teste de caixa cinza tem esse nome porque o programa de software é como uma 
+        caixa semitransparente ou cinza dentro da qual o testador pode ver parcialmente. Geralmente se concentra em erros específicos de contexto relacionados a sistemas da web.</li>
     <li><b>Teste exploratório:</b> É um técnica que tem o foco em explorar (vasculhar) um software para entender o que ele faz, o que não faz, o que funciona e o que não funciona.
     O testador utiliza sua própria experiência para projetar os testes.</li>
     <li><b>Teste de segurança:</b> Permite avaliar as vulnerabilidades em aplicações serviços frente a diferentes tipos de ataques de segurança.</li>
@@ -233,6 +235,11 @@ Exemplos de Casos de Teste:<br><br>
     de equivalência), de tal forma que todos os membros de uma determinada partição deve ser
     processado da mesma maneira (ver Kaner (2013) e Jorgensen (2014)). Existem partições de
     equivalência para valores válidos e inválidos.
+    Para obter uma cobertura de 100% com essa técnica, os casos de teste devem cobrir todas as
+partições identificadas (incluindo partições inválidas) usando no mínimo um valor de cada partição.
+A cobertura é medida como o número de partições de equivalência testadas por pelo menos um
+valor, dividido pelo número total de partições de equivalência identificadas, normalmente expresso
+como uma porcentagem. O particionamento de equivalência é aplicável em todos os níveis de teste.
    </p>
 
    <h4>Análise de valor limite</h4>
@@ -240,6 +247,18 @@ Exemplos de Casos de Teste:<br><br>
     A análise de valor limite é uma extensão do particionamento de equivalência, mas só pode ser usada
 quando a partição é ordenada, consistindo em dados numéricos ou sequenciais. Os valores mínimo
 e máximo (ou primeiro e último valores) de uma partição são seus valores limites (Beizer, 1990).
+Por exemplo, suponha que um campo de entrada aceite um único valor inteiro como uma entrada,
+usando um teclado para limitar que entradas não inteiras sejam impossíveis. O intervalo válido é de
+1 a 5, inclusive. Portanto, existem três partições de equivalência: inválidas (muito baixas); válido;
+inválido (muito alto). Para a partição de equivalência válida, os valores limites são 1 e 5. Para a
+partição inválida (muito alta), os valores limites são 6 e 9. Para a partição inválida (muito baixa), existe
+apenas um valor limite, 0, porque esta é uma partição com apenas um membro.
+No exemplo acima, identificamos dois valores limites por limite. O limite entre inválido (muito baixo)
+e válido fornece os valores de teste 0 e 1. A fronteira entre válido e inválido (muito alto) fornece os
+valores de teste 5 e 6. Algumas variações dessa técnica podem identificar três valores de limite por
+limite de dados: o valor anterior ao limite, o próprio valor limite e o imediatamente superior a ele.
+No exemplo anterior, usando valores limites de três pontos, os valores do limite inferior são 0, 1 e 2,
+e os valores dos limites superiores são 4, 5 e 6 (Jorgensen (2014)).
    </p>
 
    <h4>Teste de tabela de decisão</h4>
@@ -247,6 +266,16 @@ e máximo (ou primeiro e último valores) de uma partição são seus valores li
     Técnicas de teste combinatórias são úteis para testar a implementação de requisitos do sistema que
 especificam como diferentes condições de combinações levam à resultados diferentes. Uma
 abordagem para esse teste é o teste de tabela de decisão.
+As tabelas de decisão são uma boa maneira de registrar regras de negócios complexas que um
+sistema deve implementar. Ao criar tabelas de decisão, o testador identifica as condições
+(geralmente entradas) e as ações resultantes (geralmente saídas) do sistema. Estes formam as linhas
+da tabela, geralmente com as condições no topo e as ações na parte inferior. Cada coluna
+corresponde a uma regra de decisão que define uma combinação exclusiva de condições que
+resultam na execução das ações associadas a essa regra. Os valores das condições e ações são
+geralmente mostrados como valores booleanos (verdadeiro ou falso) ou valores discretos (p. ex.,
+vermelho, verde, azul), mas também podem ser números ou intervalos numéricos. Esses diferentes
+tipos de condições e ações podem ser encontrados juntos na mesma tabela.
+
    </p>
 
 
@@ -548,18 +577,27 @@ abordagem para esse teste é o teste de tabela de decisão.
         <div id="divlistdicas">
             <div id="div-listinha">
                 <ol>
-                    <li style="list-style-position: inside" >Um comportamento inesperado do software. <span id="span-list-1"></span></li>
-                    <li style="list-style-position: inside" >É uma inconsistência no software, algo que foi implementado de maneira incorreta.<span id="span-list-2"></li>
-                    <li style="list-style-position: inside">Evidencia o defeito, ou seja, quando há diferença entre o valor obtido e o valor esperado. <span id="span-list-3"></li>
-                    <li style="list-style-position: inside">Técnica de teste baseada numa análise da especificação de um componente ou sistema. <span id="span-list-4"></span></li>
-                    <li style="list-style-position: inside">Testes baseados numa análise da estrutura interna do componente ou sistema. <span id="span-list-5"></span></li>
-                    <li style="list-style-position: inside">Técnica que prevê a ocorrência de erros, defeitos e falhas, combase no conhecimento do testador. <span id="span-list-6"></span></li>
-                    <li style="list-style-position: inside">Testes informais (não pré-definidos) são modelados, executados, registrados e avaliados dinamicamente durante a execução do teste. <span id="span-list-7"></span></li>
-                    <li style="list-style-position: inside">Técnica de teste onde os testadores modelam, implementam e executam testes para cobrir as condições de teste encontradas em uma lista. <span id="span-list-8"></span></li>
-                    <li style="list-style-position: inside">Se concentra em componentes que são testáveis separadamente. <span id="span-list-9"></span></li>
-                    <li style="list-style-position: inside">Se concentra no comportamento e nas capacidades de todo um sistema ou produto, geralmente considerando as execuções das tarefas de ponta a ponta do sistema e oscomportamentos não-funcionais exibidos ao executar tais tarefas. <span id="span-list-10"></span></li>
-                    <li style="list-style-position: inside">Pode produzir informações para avaliar a situação do sistema para implantação e uso pelo cliente (usuário final). <span id="span-list-11"></span></li>
-                    <li style="list-style-position: inside">Esses testes devem ser realizados em todos os níveis de teste (p.e, testes para componentespodem ser baseados em uma especificação de componente), embora o foco possa ser diferente em cada nível. <span id="span-list-12"></span></li>
+                    <li style="list-style-position: inside" >Nível que se concentra nas capacidades e no comportamento de todo um sistema ou
+                        produto.<span id="span-list-1"></span></li>
+                    <li style="list-style-position: inside" >Teste baseado na experiência onde são executados de forma natural e involuntária por qualquer usuário. <span id="span-list-2"></li>
+                    <li style="list-style-position: inside">Humanos produzindo saida incorreta.<span id="span-list-3"></li>
+                    <li style="list-style-position: inside">Tipo de teste onde se baseia na parte interna ou implementação do sistema. <span id="span-list-4"></span></li>
+                    <li style="list-style-position: inside">Os componentes são testados separadamente e geralmente é realizado isoladamente do sistema. <span id="span-list-5"></span></li>
+                    <li style="list-style-position: inside">Produz informações afim de  avaliar a situação do sistema para implantação e uso pelo cliente (usuário final). <span id="span-list-6"></span></li>
+                    <li style="list-style-position: inside">Avaliam funções que o sistema deve executar e deve ser realizado em todos os niveis de teste. <span id="span-list-7"></span></li>
+                    <li style="list-style-position: inside">Implementação incorreta onde significa uma inconsistência do software. <span id="span-list-8"></span></li>
+                    <li style="list-style-position: inside">Teste onde uma aplicação é submetida a uma carga de trabalho em um determinado periodo por condições específicas afim de verificar o comportamento do sistema. <span id="span-list-9"></span></li>
+                    <li style="list-style-position: inside">Conjunto de ações que são executadas para avaliar determinadas funcionalidades e alguns recursos. <span id="span-list-10"></span></li>
+                    <li style="list-style-position: inside">Verifica a saída de dados sem a necessidade de saber a estrutura interna do código. <span id="span-list-11"></span></li>
+                    <li style="list-style-position: inside">Concentra nas interações entre componentes ou sistemas. <span id="span-list-12"></span></li>
+                    <li style="list-style-position: inside" >Nessa técnica a estrutura interna é parcialmente conhecida, o programa de software é como uma caixa semitransparente dentro da qual o testador pode ver parcialmente. <span id="span-list-13"></span></li>
+                    <li style="list-style-position: inside" >Testa o comportamento do sistema simulando condições extremas. <span id="span-list-14"></span></li>
+                    <li style="list-style-position: inside" >Técnica de teste de caixa-preta para testes nos limites do dominio de entrada. <span id="span-list-15"></span></li>
+                    <li style="list-style-position: inside" >É um comportamento inesperado do software.<span id="span-list-16"></span></li>
+                    <li style="list-style-position: inside" >Divide os dados em partições sendo que todos os membros são processados de maneira igualmente. <span id="span-list-17"></span></li>
+                    <li style="list-style-position: inside" >Avalia as características do sistema ou software como performance, usabilidade ou segurança. <span id="span-list-18"></span></li>
+                    <li style="list-style-position: inside" >Tipo de teste onde se concentra em corrigir um defeito ou uma nova funcionalidade implementada. <span id="span-list-19"></span></li>
+                    <li style="list-style-position: inside" >Usado para simular condições normais do mundo real ou carregado. <span id="span-list-20"></span></li>
                 </ol>
             </div>
         </div>
